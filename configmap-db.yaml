@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-db
+data:
+  MARIADB_DATABASE: lanchonetedb
+  #MARIADB_ROOT_PASSWORD: root
+  #MARIADB_USER: mariadb
+  #MARIADB_PASSWORD: root
+  
