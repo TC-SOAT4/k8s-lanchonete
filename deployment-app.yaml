@@ -48,8 +48,8 @@ spec:
                   key: SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL
           livenessProbe:
             httpGet:
-              path: /actuator/health
+              path: /lanchonete-app/actuator/health/liveness
               port: 8080
             initialDelaySeconds: 30
-            periodSeconds: 30
+            periodSeconds: 3
             failureThreshold: 3
