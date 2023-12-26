@@ -5,7 +5,7 @@ metadata:
   labels:
     app: app-deployment
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels: 
       app: app-pod
@@ -46,3 +46,10 @@ spec:
                 configMapKeyRef:
                   name: configmap-app
                   key: SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            failureThreshold: 3
