@@ -5,7 +5,7 @@ metadata:
   labels:
     app: app-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels: 
       app: app-pod
@@ -53,3 +53,7 @@ spec:
             initialDelaySeconds: 30
             periodSeconds: 3
             failureThreshold: 3
+          resources:
+            requests:
+              cpu: 500m
+      
